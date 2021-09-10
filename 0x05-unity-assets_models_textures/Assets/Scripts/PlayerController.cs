@@ -82,6 +82,9 @@ namespace Scripts
                 VerticalVelocity.y += Mathf.Sqrt(JumpSpeed * -3.0f * Gravity);
             VerticalVelocity.y += Gravity * Time.deltaTime;
             controller.Move(VerticalVelocity * Time.deltaTime);
+
+            if (transform.position.y < -50f)
+                transform.position = new Vector3(0f, 100f, 0f);
             
         }
 

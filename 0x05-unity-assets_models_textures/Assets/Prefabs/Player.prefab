@@ -92,7 +92,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3290003711536617936}
   - component: {fileID: 3290003711536617943}
-  m_Layer: 0
+  - component: {fileID: 3290003711031981119}
+  - component: {fileID: 3290003711031981124}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,6 +130,41 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!143 &3290003711031981119
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290003711536617940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.25
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3290003711031981124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290003711536617940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0722a7cd651e5cd4da77bca13b5f1ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementMap: {fileID: -944628639613478452, guid: 88e34fc36a3b398408b06077cba36e8b, type: 3}
+  Camera: {fileID: 0}
+  Speed: 16
+  JumpSpeed: 2
+  Gravity: -20
 --- !u!1001 &3290003711682011737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,9 +172,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1648920631199645047}
     m_Modifications:
+    - target: {fileID: 100000, guid: 77ace9321e89b5248bf446894bf3531a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 77ace9321e89b5248bf446894bf3531a, type: 3}
       propertyPath: m_Name
       value: naturePack_156
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 77ace9321e89b5248bf446894bf3531a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 77ace9321e89b5248bf446894bf3531a, type: 3}
       propertyPath: m_RootOrder
@@ -195,6 +240,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 77ace9321e89b5248bf446894bf3531a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ce07ef0402cdad4f83eb94473afc47f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ace9321e89b5248bf446894bf3531a, type: 3}
 --- !u!4 &3290003711681886427 stripped
