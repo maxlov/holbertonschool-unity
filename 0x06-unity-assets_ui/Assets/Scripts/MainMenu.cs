@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
     public void OptionsButton()
     {
-        gameManager.Load("OptionsMenu");
+        gameManager.Load("Options");
     }
 
     public void ExitButton()
