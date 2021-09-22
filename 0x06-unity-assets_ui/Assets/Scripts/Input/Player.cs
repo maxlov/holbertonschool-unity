@@ -145,7 +145,7 @@ public class @Player : IInputActionCollection, IDisposable
                     ""id"": ""3283cfea-4662-4cc7-aefc-b8be0bfb539e"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": ""ScaleVector2(x=4,y=3),StickDeadzone(min=0.15)"",
+                    ""processors"": ""ScaleVector2(x=10,y=4)"",
                     ""groups"": ""Playstation;Nintendo;GenericGamepad"",
                     ""action"": ""Rotate"",
                     ""isComposite"": false,
