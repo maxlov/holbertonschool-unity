@@ -110,17 +110,6 @@
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2c4eb716-64a3-499c-ad2a-c329636a79c7",
-                    "path": "<DualShockGamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Playstation",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
@@ -143,7 +132,7 @@
                     "id": "3283cfea-4662-4cc7-aefc-b8be0bfb539e",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
-                    "processors": "ScaleVector2(x=3,y=3)",
+                    "processors": "ScaleVector2(x=4,y=3),StickDeadzone(min=0.15)",
                     "groups": "Playstation;Nintendo;GenericGamepad",
                     "action": "Rotate",
                     "isComposite": false,
@@ -157,6 +146,44 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "164811e7-1ce8-4633-aea0-b830dc840943",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "767cceb2-ade3-4c48-bd18-72d9218dbebe",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b36776a1-c087-4136-81a8-97ff99a932b8",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6045d31e-9efc-4533-a1b6-356108551fc8",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GenericGamepad;Nintendo;Playstation",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

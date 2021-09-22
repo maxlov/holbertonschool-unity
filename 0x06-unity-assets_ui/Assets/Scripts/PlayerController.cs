@@ -16,7 +16,7 @@ namespace Scripts
         // Camera for rotation
         public Transform Camera;
 
-        /// Character controller
+        // Character controller
         private CharacterController controller;
         private CapsuleCollider capsule;
 

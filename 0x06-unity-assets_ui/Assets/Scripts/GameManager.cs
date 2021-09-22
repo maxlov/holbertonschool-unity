@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(key);
     }
 
+    public void Reload()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void LoadPrev()
     {
         SceneManager.LoadScene(PrevScene);
