@@ -6,20 +6,19 @@ using UnityEngine.UI;
 public class WinTrigger : MonoBehaviour
 {
     private GameObject player;
-    public Text timer;
+    private Timer timerCode;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        timerCode = player.GetComponent<Timer>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            player.GetComponent<Timer>().enabled = false;
-            timer.color = Color.green;
-            timer.fontSize = 60;
+            timerCode.Win();
         }
     }
 }

@@ -8,7 +8,9 @@ public class Timer : MonoBehaviour
     public Text timerText;
     private float time = 0f;
 
-    // Update timer text
+    public GameObject winCanvas;
+    public Text winTimerText;
+
     void Update()
     {
         time += Time.deltaTime;
@@ -17,5 +19,15 @@ public class Timer : MonoBehaviour
         float seconds = time % 60;
 
         timerText.text = $"{minutes.ToString()}:{seconds.ToString("0#.00")}";
+    }
+
+    public void Win()
+    {
+        winCanvas.SetActive(true);
+        winTimerText.text = timerText.text;
+        timerText.enabled = false;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

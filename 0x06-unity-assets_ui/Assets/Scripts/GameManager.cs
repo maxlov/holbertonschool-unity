@@ -32,4 +32,14 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(PrevScene);
     }
+
+    public void LoadNext()
+    {
+        int NextScene = SceneManager.GetActiveScene().buildIndex + 1;
+
+        if (NextScene > SceneManager.sceneCountInBuildSettings - 1)
+            NextScene = 0;
+
+        SceneManager.LoadScene(NextScene);
+    }
 }
