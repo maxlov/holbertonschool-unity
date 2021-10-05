@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     PlayerInput playerInput;
     CharacterController characterController;
     Animator animator;
-    Camera cam;
 
     int isWalkingHash;
     Vector2 currentMovementInput;
@@ -51,7 +50,6 @@ public class PlayerController : MonoBehaviour
         playerInput = new PlayerInput();
         characterController = GetComponent<CharacterController>();
         animator = gameObject.GetComponentInChildren<Animator>();
-        cam = Camera.main;
 
         isWalkingHash = Animator.StringToHash("isWalking");
         isJumpingHash = Animator.StringToHash("isJumping");
@@ -163,7 +161,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isMovementPressed)
         {
-            float targetAngle = Mathf.Atan2(currentMovement.x, currentMovement.z) * Mathf.Rad2Deg + cam.transform.eulerAngles.y;
+            float targetAngle = Mathf.Atan2(currentMovement.x, currentMovement.z) * Mathf.Rad2Deg + Camera.main.transform.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnVelocity, turnSpeed);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
