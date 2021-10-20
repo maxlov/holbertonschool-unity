@@ -147,6 +147,8 @@ MonoBehaviour:
   timerText: {fileID: 0}
   winCanvas: {fileID: 0}
   winTimerText: {fileID: 0}
+  musicSource: {fileID: 0}
+  victory: {fileID: 8300000, guid: 9fc7e288d945861478373c2cc3a03b88, type: 3}
 --- !u!82 &3290003711031981120
 AudioSource:
   m_ObjectHideFlags: 0
