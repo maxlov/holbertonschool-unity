@@ -55,6 +55,10 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+#AR Foundations Remote
+/Assets/Plugins/ARFoundationRemoteInstaller/
+/ARFoundationRemoteCompanionApp/
+
 # Crashlytics generated file
 crashlytics-build.properties
 
