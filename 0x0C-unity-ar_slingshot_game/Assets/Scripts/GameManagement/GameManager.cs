@@ -8,15 +8,14 @@ public class GameManager : MonoBehaviour
 {
     private State currentState;
     public ARPlaneManager planeManager;
+    public GameObject UICanvas;
+    [HideInInspector] public List<GameObject> UIList;
 
-    [System.Serializable]
-    public class UIStruct
+    private void Awake()
     {
-        public string name;
-        public GameObject UIAsset;
+        foreach (Transform child in UICanvas.transform)
+            UIList.Add(child.gameObject);
     }
-
-    public UIStruct[] UIAssets;
 
     void Start()
     {

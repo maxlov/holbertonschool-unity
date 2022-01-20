@@ -7,6 +7,7 @@ using UnityEngine.XR.ARSubsystems;
 public class GameSetupState : State
 {
     private ARPlaneManager planeManager;
+    private GameObject stateUI;
 
     public GameSetupState(GameManager gameManager) : base(gameManager)
     {
@@ -15,6 +16,20 @@ public class GameSetupState : State
 
     public override void Tick()
     {
-        
+
+    }
+
+    public override void OnStateEnter()
+    {
+        foreach (var UIElement in gameManager.UIList)
+            if (UIElement.name == "SetupUI")
+                stateUI = UIElement;
+        if (stateUI)
+            stateUI.SetActive(true);
+    }
+
+    public override void OnStateExit()
+    {
+        stateUI.SetActive(false);
     }
 }

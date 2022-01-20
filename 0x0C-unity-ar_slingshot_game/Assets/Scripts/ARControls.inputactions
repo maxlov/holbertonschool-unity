@@ -1,0 +1,39 @@
+{
+    "name": "ARControls",
+    "maps": [
+        {
+            "name": "ARSlignshotInput",
+            "id": "e0ecd575-feea-488d-94ba-e949c3ed7293",
+            "actions": [
+                {
+                    "name": "Tap",
+                    "type": "Button",
+                    "id": "6c084a7a-54ff-4324-ac91-0383d9a83129",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f25bf548-2805-4b1c-9e6f-ca6af8200631",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "Tap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Mobile",
+            "bindingGroup": "Mobile",
+            "devices": []
+        }
+    ]
+}
