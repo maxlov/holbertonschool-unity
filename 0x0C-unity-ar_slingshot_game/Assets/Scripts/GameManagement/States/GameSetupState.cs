@@ -3,26 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-
+using UnityEngine.AI;
 public class GameSetupState : State
 {
-    private ARPlaneManager planeManager;
+    private ARPlane gamePlane;
+    private NavMeshSurface gameNavSurface;
     private GameObject stateUI;
 
     public GameSetupState(GameManager gameManager) : base(gameManager)
     {
-        planeManager = gameManager.planeManager;
+        gamePlane = gameManager.gamePlane;
+        gameNavSurface = gamePlane.GetComponent<NavMeshSurface>();
     }
 
     public override void Tick()
     {
-
     }
+
 
     public override void OnStateEnter()
     {
         foreach (var UIElement in gameManager.UIList)
-            if (UIElement.name == "SetupUI")
+            if (UIElement.name == "GameSetupUI")
                 stateUI = UIElement;
         if (stateUI)
             stateUI.SetActive(true);

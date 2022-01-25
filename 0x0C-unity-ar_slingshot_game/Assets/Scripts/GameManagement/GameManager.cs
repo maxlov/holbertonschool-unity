@@ -8,8 +8,10 @@ public class GameManager : MonoBehaviour
 {
     private State currentState;
     public ARPlaneManager planeManager;
+    public ARRaycastManager raycastManager;
     public GameObject UICanvas;
     [HideInInspector] public List<GameObject> UIList;
+    [HideInInspector] public ARPlane gamePlane;
 
     private void Awake()
     {
@@ -19,12 +21,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        SetState(new GameStartState(this));
+        SetState(new PlaneTrackingState(this));
     }
 
     void Update()
     {
-        currentState.Tick();    
+        currentState.Tick();
     }
 
     public void SetState(State state)

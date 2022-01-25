@@ -32,7 +32,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         /// <summary>
         /// The object instantiated as a result of a successful raycast intersection with a plane.
         /// </summary>
-        public GameObject spawnedObject { get; private set; }
+        public List<GameObject> spawnedObjects = new List<GameObject>();
 
         void Awake()
         {
@@ -62,14 +62,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 // will be the closest hit.
                 var hitPose = s_Hits[0].pose;
 
-                if (spawnedObject == null)
-                {
-                    spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
-                }
-                else
-                {
-                    spawnedObject.transform.position = hitPose.position;
-                }
+                Debug.Log("Spawning new object");
+                spawnedObjects.Add(Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation));
             }
         }
 
