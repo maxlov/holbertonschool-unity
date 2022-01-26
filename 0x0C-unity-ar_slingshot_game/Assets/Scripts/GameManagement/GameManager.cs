@@ -7,11 +7,18 @@ using UnityEngine.XR.ARSubsystems;
 public class GameManager : MonoBehaviour
 {
     private State currentState;
+
+    public ARSessionOrigin sessionOrigin;
+    public GameObject aRSession;
     public ARPlaneManager planeManager;
     public ARRaycastManager raycastManager;
+    public TargetManager targetManager;
+    [HideInInspector] public ARPlane gamePlane = null;
+
     public GameObject UICanvas;
     [HideInInspector] public List<GameObject> UIList;
-    [HideInInspector] public ARPlane gamePlane;
+
+    public GameObject ammoLauncher;
 
     private void Awake()
     {
@@ -26,16 +33,21 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        currentState.Tick();
+        if (currentState != null)
+            currentState.Tick();
     }
 
     public void SetState(State state)
     {
         if (currentState != null)
+            Debug.Log($"Exiting state {currentState}");
+        if (currentState != null)
             currentState.OnStateExit();
 
+        Debug.Log($"Setting state to {state}");
         currentState = state;
 
+        Debug.Log($"Entering state {currentState}");
         if (currentState != null)
             currentState.OnStateEnter();
     }
