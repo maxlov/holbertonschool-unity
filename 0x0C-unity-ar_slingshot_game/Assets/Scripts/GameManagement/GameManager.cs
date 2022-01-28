@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARSubsystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,13 +11,16 @@ public class GameManager : MonoBehaviour
     public GameObject aRSession;
     public ARPlaneManager planeManager;
     public ARRaycastManager raycastManager;
-    public TargetManager targetManager;
     [HideInInspector] public ARPlane gamePlane = null;
 
     public GameObject UICanvas;
     [HideInInspector] public List<GameObject> UIList;
 
-    public GameObject ammoLauncher;
+    public TargetManager targetManager;
+    public ScoreManager scoreManager;
+    public AmmoLauncher ammoLauncher;
+
+    [HideInInspector] public int score;
 
     private void Awake()
     {
@@ -40,14 +42,11 @@ public class GameManager : MonoBehaviour
     public void SetState(State state)
     {
         if (currentState != null)
-            Debug.Log($"Exiting state {currentState}");
-        if (currentState != null)
             currentState.OnStateExit();
 
         Debug.Log($"Setting state to {state}");
         currentState = state;
 
-        Debug.Log($"Entering state {currentState}");
         if (currentState != null)
             currentState.OnStateEnter();
     }

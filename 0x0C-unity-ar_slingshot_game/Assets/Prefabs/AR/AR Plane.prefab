@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7247677719041955278}
   - component: {fileID: 7247677719041955279}
   - component: {fileID: 7247677719041955276}
-  - component: {fileID: 7247677719041955277}
+  - component: {fileID: -1475031789761558024}
   - component: {fileID: 7247677719041955274}
   - component: {fileID: 7247677719041955275}
   - component: {fileID: 7247677719041955272}
@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d180956a54db4646a1c6342921672ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!64 &7247677719041955277
+--- !u!64 &-1475031789761558024
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

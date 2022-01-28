@@ -13,6 +13,7 @@ public class Ammo : MonoBehaviour
     private AmmoLauncher ammoLauncher;
 
     private bool isShoot = false;
+    private bool hasHit = false;
     public float forceMultiplier = 3;
 
     private void Start()
@@ -28,17 +29,15 @@ public class Ammo : MonoBehaviour
             Touch touch = Input.GetTouch(0);
 
             if (touch.phase == TouchPhase.Began)
-            {
                 touchStartPos = touch.position;
-            }
 
             if (touch.phase == TouchPhase.Ended)
                 Shoot(touch.position - touchStartPos);
         }
 
-        if (transform.position.y <= -50f)
+        if (transform.position.y <= -6f)
         {
-            ammoLauncher.spawnAmmo();
+            ammoLauncher.SpawnAmmo();
             Destroy(gameObject);
         }
 
@@ -60,11 +59,12 @@ public class Ammo : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("target"))
-        {
-            Debug.Log("Hit Target!");
-        }
-        ammoLauncher.spawnAmmo();
-        Destroy(gameObject);
+        if (hasHit || collision.gameObject.CompareTag("Ammo"))
+            return;
+
+        if (collision.gameObject.CompareTag("Target"))
+            ammoLauncher.AmmoHitTarget(collision.gameObject);
+        hasHit = true;
+        ammoLauncher.SpawnAmmo();
     }
 }

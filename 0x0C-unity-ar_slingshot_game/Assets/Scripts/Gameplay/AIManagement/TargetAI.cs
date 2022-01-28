@@ -40,7 +40,7 @@ public class TargetAI : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawRay(transform.position, debug_agent.destination - transform.position);
             Gizmos.color = Color.yellow;
-            Gizmos.DrawSphere(debug_agent.destination, .25f);
+            Gizmos.DrawSphere(debug_agent.destination, .01f);
         }
     }
 #endif
