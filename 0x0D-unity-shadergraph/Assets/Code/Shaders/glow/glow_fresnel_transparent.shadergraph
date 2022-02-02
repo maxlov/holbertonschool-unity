@@ -59,6 +59,9 @@
         },
         {
             "m_Id": "d6a5a403fa4e4047b483c8d24b6afa36"
+        },
+        {
+            "m_Id": "f08694d628424c84b6067936e9eef7a1"
         }
     ],
     "m_GroupDatas": [],
@@ -123,6 +126,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "d6a5a403fa4e4047b483c8d24b6afa36"
+                },
+                "m_SlotId": 3
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "f08694d628424c84b6067936e9eef7a1"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "de9c87b38c864156a52cde2442a0970f"
                 },
                 "m_SlotId": 2
@@ -178,6 +195,9 @@
             },
             {
                 "m_Id": "c0b6c2279c2048e1b49695676fe60e82"
+            },
+            {
+                "m_Id": "f08694d628424c84b6067936e9eef7a1"
             }
         ]
     },
@@ -314,6 +334,21 @@
         "m_SerializableColors": []
     },
     "m_SerializedDescriptor": "VertexDescription.Tangent"
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "12b9d853a97b42c6813ab76e902cf796",
+    "m_Id": 0,
+    "m_DisplayName": "Alpha",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Alpha",
+    "m_StageCapability": 2,
+    "m_Value": 1.0,
+    "m_DefaultValue": 1.0,
+    "m_Labels": []
 }
 
 {
@@ -1052,7 +1087,7 @@
     "m_ActiveSubTarget": {
         "m_Id": "21525dc80d85466f909975c64e7f051c"
     },
-    "m_SurfaceType": 0,
+    "m_SurfaceType": 1,
     "m_AlphaMode": 0,
     "m_TwoSided": false,
     "m_AlphaClip": false,
@@ -1319,5 +1354,38 @@
         "a": 0.0
     },
     "m_ColorMode": 0
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "f08694d628424c84b6067936e9eef7a1",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.Alpha",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "12b9d853a97b42c6813ab76e902cf796"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
 }
 

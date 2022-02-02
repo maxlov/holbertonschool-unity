@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: glowC
-  m_Shader: {fileID: -6465566751694194690, guid: fbafe135a468e644ba555456feaac36f, type: 3}
+  m_Name: glow
+  m_Shader: {fileID: -6465566751694194690, guid: 00a0ebf23ed3fc24b95e7bfa02ff99f4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -76,7 +76,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_d64566afcafa425ca9c649bfd5855f54: 0.77
+    - Vector1_d64566afcafa425ca9c649bfd5855f54: 0.84
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -104,8 +104,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_ab597bdb8e824f149a32bd73c0110fc6: {r: 1, g: 1, b: 1, a: 0}
-    - Color_e9ff99ec15f44091951622add09a5e1c: {r: 1, g: 0, b: 0.954545, a: 0}
+    - Color_ab597bdb8e824f149a32bd73c0110fc6: {r: 0, g: 0.9574301, b: 1, a: 0}
+    - Color_e9ff99ec15f44091951622add09a5e1c: {r: 0.91194963, g: 1, b: 0.99412054, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

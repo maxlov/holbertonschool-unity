@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: glowC
-  m_Shader: {fileID: -6465566751694194690, guid: fbafe135a468e644ba555456feaac36f, type: 3}
+  m_Name: disintegrate
+  m_Shader: {fileID: -6465566751694194690, guid: 65084d12ee532264e9376d6ea061df2f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -76,7 +76,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_d64566afcafa425ca9c649bfd5855f54: 0.77
+    - Vector1_4dbb11e66ad54798b70c21a8d49f6ac0: 1
+    - Vector1_8882965c1452444d81e1cdcbffb78da2: 60
+    - Vector1_91f25374aa924fc38c0ce6e1458dc1e0: 3
+    - Vector1_cb28472941d24d369cb17ed0243954c3: 0.25
+    - Vector1_d276201d4c15456a97ba37c03bd8e605: 0.5
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -104,14 +108,14 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_ab597bdb8e824f149a32bd73c0110fc6: {r: 1, g: 1, b: 1, a: 0}
-    - Color_e9ff99ec15f44091951622add09a5e1c: {r: 1, g: 0, b: 0.954545, a: 0}
+    - Color_1e7692ddb7ee4d3b8570fa71cf318a77: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EdgeColor: {r: 9.573235, g: 0, b: 16, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &8659011084787033376
+--- !u!114 &6891330933888509536
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
